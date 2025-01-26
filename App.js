@@ -13,19 +13,22 @@
  * createElement() => html browser understand
  *
  * jsx
- * 
+ *
  */
-
-const parent = React.createElement("div",{ id: "parent" },[ 
-    React.createElement("div", { id: "child" }, [
+import React from "react";
+import ReactDOM from "react-dom/client";
+const parent = React.createElement("div", { id: "parent" }, [
+  React.createElement("div", { id: "child" }, [
+    React.createElement("h1", {}, "learn parcel"),
+    React.createElement("h2", {}, "I am h2 Tag"),
+  ]),
+  React.createElement("div", { id: "child2" }, [
     React.createElement("h1", {}, "I am h1 Tag"),
     React.createElement("h2", {}, "I am h2 Tag"),
-  ])
-  ,  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I am h1 Tag"),
-    React.createElement("h2", {}, "I am h2 Tag"),
-  ])              ]
-);
-const heading = ReactDOM.createRoot(document.getElementById("heading"));
-root.render(heading);
+  ]),
+]);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(parent);
 console.log(parent);
+
+// ignitting our app
