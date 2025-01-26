@@ -1,34 +1,21 @@
-/**
- * <div id="parent">
- *     <div id="child">
- *         <h1> I am h1 Tag</h1>
- *         <h2> I am h2 Tag</h2>
- *     </div>
- *     <div id="child2">
- *         <h1> I am h1 Tag</h1>
- *         <h2> I am h2 Tag</h2>
- *     </div>
- * </div>
- *
- * createElement() => html browser understand
- *
- * jsx
- *
- */
 import React from "react";
 import ReactDOM from "react-dom/client";
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "learn parcel"),
-    React.createElement("h2", {}, "I am h2 Tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I am h1 Tag"),
-    React.createElement("h2", {}, "I am h2 Tag"),
-  ]),
-]);
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
-console.log(parent);
 
-// ignitting our app
+
+const element = <span>React Element</span>
+const Title = () => (<h1 className="head">slm I am Mariem</h1>);
+// React Functional Component
+const number = 1000;
+const HeadingComponenet = () => (
+  <div id="container">
+    <h2>{number}</h2>
+    {element}
+    <Title />
+    <Title></Title>
+    {Title()}
+    <h1>Learn React</h1>
+  </div>
+);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponenet />);

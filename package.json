@@ -2,8 +2,9 @@
   "name": "pingucoder-react",
   "version": "1.0.0",
   "description": "this is pingucoder React",
-  
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [
@@ -19,7 +20,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
-  "browsersList":[
+  "browsersList": [
     "last 2 version"
   ]
 }
